@@ -1,3 +1,4 @@
+# Importerer nyttige biblioteker
 import pygame as pg
 import random as rd
 
