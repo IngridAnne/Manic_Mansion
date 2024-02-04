@@ -158,10 +158,7 @@ class Menneske(SpillObjekt):
     def sjekkKollisjonHindring(self, xPosisjon, yPosisjon):
         for h in spillbrett.objekter:
             if isinstance(h, Hindring):
-                if (h.xPosisjon < xPosisjon < h.xPosisjon + BREDDE_FIGUR or
-                    h.xPosisjon < xPosisjon + BREDDE_FIGUR < h.xPosisjon + BREDDE_FIGUR) and \
-                   (h.yPosisjon < yPosisjon < h.yPosisjon + BREDDE_FIGUR or
-                    h.yPosisjon < yPosisjon + BREDDE_FIGUR < h.yPosisjon + BREDDE_FIGUR):
+                if (h.xPosisjon < xPosisjon < h.xPosisjon + BREDDE_FIGUR or h.xPosisjon < xPosisjon + BREDDE_FIGUR < h.xPosisjon + BREDDE_FIGUR) and (h.yPosisjon < yPosisjon < h.yPosisjon + BREDDE_FIGUR or h.yPosisjon < yPosisjon + BREDDE_FIGUR < h.yPosisjon + BREDDE_FIGUR):
                     return True
         return False
     
@@ -260,7 +257,6 @@ while spill_i_gang:
                 break
             else:
                 # Hvis kollisjon med sau imens en bærer sau stopper spillet
-                #pg.quit()
                 spill_i_gang = False
     
     # Sjekker om en har klart å hente en sau over til mål
