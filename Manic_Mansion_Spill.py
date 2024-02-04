@@ -70,11 +70,9 @@ class Spillbrett:
         # Sjekk for overlapp før du legger til objektet
         while sjekkOverlapp(SpillObjekt.xPosisjon, SpillObjekt.yPosisjon, self.objekter):
             if isinstance(SpillObjekt, Sau):
-                print("a")
                 SpillObjekt.xPosisjon = rd.randint(BREDDE - int(BREDDE / 5), BREDDE - BREDDE_FIGUR)
                 SpillObjekt.yPosisjon = rd.randint(0, HOYDE - BREDDE_FIGUR)
             if isinstance(SpillObjekt, Hindring):
-                print("b")
                 SpillObjekt.xPosisjon = rd.randint(x, BREDDE - x - BREDDE_FIGUR)
                 SpillObjekt.yPosisjon = rd.randint(0, HOYDE - BREDDE_FIGUR)
                 
